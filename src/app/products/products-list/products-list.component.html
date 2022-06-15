@@ -1,0 +1,23 @@
+<!-- list products -->
+<div class="card-container">
+  <mat-card class="card-content" *ngFor="let product of products">
+    <mat-card-header>
+      <mat-card-title> {{ product.title }}</mat-card-title>
+      <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="product.thumbImage" [src]="product.thumbImage" />
+    <mat-card-content>
+      <p>{{ product.price | currency }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- icon edit -->
+      <button mat-mini-fab color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <!-- icon delete -->
+      <button mat-mini-fab color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
