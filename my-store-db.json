@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": "5b5e3168b3a1c814a80b2b9f",
+      "salePrice": 3.96,
+      "price": 9.9,
+      "title": "Puma",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://th.bing.com/th/id/R.1f873d03c722f89e143a480318929e20?rik=npusp6j6izweig&pid=ImgRaw&r=0",
+      "brand": "ACC"
+    },
+    {
+      "id": "5b5e3168b3a1c814a80b2b9g",
+      "salePrice": 7.96,
+      "price": 10.9,
+      "title": "Reebok",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://assets.reebok.com/images/w_600,f_auto,q_auto/b5dca52800ae42faa97fab3601556417_9366/Reebok_Nano_X_Negro_FV6672_52_standard.jpg",
+      "brand": "ACC"
+    },
+    {
+      "id": "5b5e3168b3a1c814a80b2b9h",
+      "salePrice": 4.96,
+      "price": 8.9,
+      "title": "Nike",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwd960b64f/products/NI_AA7400-001/NI_AA7400-001-5.JPG",
+      "brand": "ACC"
+    },
+    {
+      "id": "5b5e3168b3a1c814a80b2b9i",
+      "salePrice": 5.96,
+      "price": 8.1,
+      "title": "Adidas",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://http2.mlstatic.com/tenis-adidas-skateboarding-busenitz-pro-100-originales-D_NQ_NP_957887-MLM31232887789_062019-F.jpg",
+      "brand": "ACC"
+    },
+    {
+      "id": "5b5e3168b3a1c814a80b2b9j",
+      "salePrice": 6.96,
+      "price": 15.9,
+      "title": "Start",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://http2.mlstatic.com/tenis-adidas-skateboarding-busenitz-pro-100-originales-D_NQ_NP_957887-MLM31232887789_062019-F.jpg",
+      "brand": "ACC"
+    },
+    {
+      "id": "5b5e3168b3a1c814a80b2b9k",
+      "salePrice": 7.96,
+      "price": 20.3,
+      "title": "Reebok",
+      "url": "https://www.amazon.com/dp/2000314834",
+      "thumbImage": "https://assets.reebok.com/images/w_600,f_auto,q_auto/b5dca52800ae42faa97fab3601556417_9366/Reebok_Nano_X_Negro_FV6672_52_standard.jpg",
+      "brand": "ACC"
+    },
+    {
+      "title": "Best Model",
+      "brand": "Sara Style",
+      "price": 15.2,
+      "salePrice": 25.9,
+      "thumbImage": "https://th.bing.com/th/id/R.b446cc4aaf3fddcca0a558a578a5c006?rik=yqcZqO38F%2fWMiQ&riu=http%3a%2f%2ftheimpression.com%2fwp-content%2fuploads%2f2017%2f09%2fmarchesa-rs18-1042.jpg&ehk=H7cI%2fshyDRUgpjZZ2dAoCsGH%2bF5%2bRvoekqMK6dmbF7c%3d&risl=&pid=ImgRaw&r=0",
+      "id": "MK9WTZy"
+    }
+  ]
+}
