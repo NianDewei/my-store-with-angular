@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsAddComponent } from './products-add/products-add.component';
 import { ProductsEditComponent } from './products-edit/products-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductFormComponent } from './shared/components/product-form/product-form.component';
 
 @NgModule({
   declarations: [
     ProductsComponent,
     ProductsListComponent,
     ProductsAddComponent,
-    ProductsEditComponent
+    ProductsEditComponent,
+    ProductFormComponent
   ],
   imports: [
     CommonModule,

@@ -4,9 +4,9 @@
     <mat-card-header>
       <mat-card-title>Add New Product</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="formAddProduct.value.thumbImage">
+    <img mat-card-image [src]="formProduct.value.thumbImage">
     <mat-card-content>
-      <form [formGroup]="formAddProduct">
+      <form [formGroup]="formProduct">
         <mat-form-field>
           <input matInput placeholder="Title" formControlName="title">
         </mat-form-field>

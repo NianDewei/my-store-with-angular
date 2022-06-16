@@ -10,7 +10,7 @@ import { ProductsService } from '../shared/services/products.service';
   styleUrls: ['./products-edit.component.sass'],
 })
 export class ProductsEditComponent implements OnInit {
-  formEditProduct: FormGroup = new FormGroup({
+  formProduct: FormGroup = new FormGroup({
     title: new FormControl(''),
     brand: new FormControl(''),
     price: new FormControl(''),
@@ -31,13 +31,13 @@ export class ProductsEditComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.service.showProduct(this.id).subscribe((result) => {
       // this.formEditProduct.setValue(result);
-      this.formEditProduct.patchValue(result);
+      this.formProduct.patchValue(result);
     });
   }
 
-  edit() {
-    if (this.formEditProduct.valid) {
-      const product = this.formEditProduct.value; //Product
+  submit() {
+    if (this.formProduct.valid) {
+      const product = this.formProduct.value; //Product
       product.id = this.id;
       console.log('This is the product', product);
       this.service.updateProduct(product).subscribe((result) => {

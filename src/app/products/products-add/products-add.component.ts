@@ -10,7 +10,7 @@ import { ProductsService } from '../shared/services/products.service';
   styleUrls: ['./products-add.component.sass'],
 })
 export class ProductsAddComponent implements OnInit {
-  formAddProduct: FormGroup = new FormGroup({
+  formProduct: FormGroup = new FormGroup({
     title: new FormControl(''),
     brand: new FormControl(''),
     price: new FormControl(''),
@@ -23,8 +23,8 @@ export class ProductsAddComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
-    if (this.formAddProduct.valid) {
-      const product = this.formAddProduct.value; //Product
+    if (this.formProduct.valid) {
+      const product = this.formProduct.value; //Product
       this.service.addProduct(product).subscribe((result) => {
         this.route.navigate(['/products']);
         this.snackBar.open('The product has been added', 'Close', {
