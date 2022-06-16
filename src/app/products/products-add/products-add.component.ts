@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { ProductsService } from '../shared/services/products.service';
 
@@ -17,16 +18,18 @@ export class ProductsAddComponent implements OnInit {
     thumbImage: new FormControl(''),
   });
 
-  constructor(private service: ProductsService, private route: Router) {}
+  constructor(private service: ProductsService, private route: Router,private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
   submit() {
     if (this.formAddProduct.valid) {
       const product = this.formAddProduct.value; //Product
-      console.log('Model data', product);
       this.service.addProduct(product).subscribe((result) => {
-        console.log('The product has been added');
+        this.route.navigate(['/products']);
+        this.snackBar.open('The product has been added', 'Close', {
+          duration: 3000,
+        });
       });
     } else {
       console.error('Form is not valid');

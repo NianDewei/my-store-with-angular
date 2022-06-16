@@ -11,11 +11,11 @@
     </mat-card-content>
     <mat-card-actions>
       <!-- icon edit -->
-      <button mat-mini-fab color="primary">
+      <button mat-mini-fab color="primary" [routerLink]="['/products','edit', product.id]">
         <mat-icon>edit</mat-icon>
       </button>
       <!-- icon delete -->
-      <button mat-mini-fab color="warn">
+      <button mat-mini-fab color="warn" (click)="deleteProduct(product.id)">
         <mat-icon>delete</mat-icon>
       </button>
     </mat-card-actions>

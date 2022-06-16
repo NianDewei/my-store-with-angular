@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   private validateLogin(user: User) {
     if (user.username === 'admin' && user.password === 'admin') {
       console.log("Good, you are logged in");
-      this.router.navigate(['']);
+      this.router.navigate(['/products']);
     }else{
       console.error("Bad, you are not logged in");
     }
