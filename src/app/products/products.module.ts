@@ -10,6 +10,8 @@ import { ProductsAddComponent } from './products-add/products-add.component';
 import { ProductsEditComponent } from './products-edit/products-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductFormComponent } from './shared/components/product-form/product-form.component';
+import { ToolbarComponent } from '../shared/components/toolbar/toolbar.component';
+import { ProgressIndicatorComponent } from '../shared/components/progress-indicator/progress-indicator.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import { ProductFormComponent } from './shared/components/product-form/product-f
     ProductsListComponent,
     ProductsAddComponent,
     ProductsEditComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ToolbarComponent,
+    ProgressIndicatorComponent
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
     MaterialModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
+
 })
 export class ProductsModule { }
