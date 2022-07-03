@@ -4,15 +4,45 @@
     <mat-card-header>
       <mat-card-title>{{ title }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="formProduct.value.thumbImage" />
+    <img
+      mat-card-image
+      *ngIf="
+        formProduct.value?.thumbImage && !formProduct.get('thumbImage')?.invalid
+      "
+      [src]="formProduct.value.thumbImage"
+    />
     <mat-card-content>
       <form [formGroup]="formProduct">
         <mat-form-field>
           <input matInput placeholder="Title" formControlName="title" />
+          <!-- message of error validatation -->
+          <mat-error
+            *ngIf="
+              formProduct?.get('title')?.getError('required') &&
+              (formProduct?.get('title')?.dirty ||
+                formProduct?.get('title')?.touched)
+            "
+          >
+            Title is required.
+          </mat-error>
+          <mat-error *ngIf="formProduct?.get('title')?.getError('minlength')">
+            Title length is too short.
+          </mat-error>
+          <!-- end messages -->
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Brand" formControlName="brand" />
+          <mat-error
+            *ngIf="
+              formProduct?.get('brand')?.getError('required') &&
+              (formProduct?.get('brand')?.dirty ||
+                formProduct?.get('brand')?.touched)
+            "
+          >
+            Brand is required.
+          </mat-error>
         </mat-form-field>
+
         <mat-form-field>
           <input
             matInput
@@ -20,7 +50,23 @@
             placeholder="Price"
             formControlName="price"
           />
+          <!-- message of error validatation -->
+          <mat-error
+            *ngIf="
+              formProduct?.get('price')?.getError('required') &&
+              (formProduct?.get('price')?.dirty ||
+                formProduct?.get('price')?.touched)
+            "
+          >
+            Price is required.
+          </mat-error>
+
+          <mat-error *ngIf="formProduct.get('price')?.getError('minprice')">
+            Price must be greater than $10
+          </mat-error>
+          <!-- end messages -->
         </mat-form-field>
+
         <mat-form-field>
           <input
             matInput
@@ -28,6 +74,19 @@
             placeholder="Sale Price"
             formControlName="salePrice"
           />
+          <mat-error
+            *ngIf="
+              formProduct?.get('salePrice')?.getError('required') &&
+              (formProduct?.get('salePrice')?.dirty ||
+                formProduct?.get('salePrice')?.touched)
+            "
+          >
+            Sale price is required.
+          </mat-error>
+
+          <mat-error *ngIf="formProduct.get('salePrice')?.getError('minprice')">
+            Price must be greater than $10
+          </mat-error>
         </mat-form-field>
         <mat-form-field>
           <input
@@ -35,11 +94,24 @@
             placeholder="Thumb Image URL"
             formControlName="thumbImage"
           />
+          <mat-error
+            *ngIf="
+              formProduct?.get('thumbImage')?.getError('required') &&
+              (formProduct?.get('thumbImage')?.dirty ||
+                formProduct?.get('thumbImage')?.touched)
+            "
+          >
+            Image is required
+          </mat-error>
+
+          <mat-error *ngIf="formProduct.get('thumbImage')?.getError('pattern')">
+            Url is invalid
+          </mat-error>
         </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="onSubmit()">
+      <button [disabled]="formProduct.invalid" mat-raised-button color="primary" (click)="onSubmit()">
         {{ labelSubmit }}
       </button>
       <button mat-stroked-button color="basic" (click)="onCancel()">
